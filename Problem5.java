@@ -17,7 +17,7 @@ public class Problem5 {
         }
         for (int i = 0; i < 3; i++) {
 
-            System.out.printf(" [%d년 %d월]\t\t\t\t\t\t\t\t\t", year, month1);
+            System.out.printf(" [%d년 %02d월]\t\t\t\t\t\t\t\t\t", year, month1);
             month1++;
             if(month1==13){     // 12월달 입력경우
                 month1=month1-12;
