@@ -45,7 +45,7 @@ public class Problem6 {
         while(cnt<=total){
             vote= rd.nextInt(num);
             member_input[vote]++;
-            System.out.printf("[투표진행률]: %.2f,%d명 투표==>%s\n",now,cnt,member[vote]);
+            System.out.printf("[투표진행률]: %.2f%%,%d명 투표==>%s\n",now,cnt,member[vote]);
             for(int i=0;i<num;i++){
                 System.out.printf("[기호:%d] %s:   %.2f%%  (투표수: %d)\n",i+1,member[i],(double)member_input[i]/(double)total*100.0,member_input[i]);
             }
@@ -55,10 +55,10 @@ public class Problem6 {
         }
 
         for(int i=0;i<num;i++){
-           if(elected<member_input[i]){
-               elected=member_input[i];
-               choice=i;
-           }
+            if(elected<member_input[i]){
+                elected=member_input[i];
+                choice=i;
+            }
         }
         System.out.println("[투표결과] 당선인 :"+member[choice]);
 
