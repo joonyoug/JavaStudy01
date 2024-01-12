@@ -5,7 +5,16 @@ public class Problem4 {
 
     static String Number(String year,String month,String date,String sex){
         Random ram=new Random();
+
+
+        if(Integer.parseInt(month)<10){
+            month="0"+month;
+        }
+        if (Integer.parseInt(date)<10){
+            date="0"+date;
+        }
         String number=year.substring(2)+month+date+"-";
+
         if(sex.equals("m")){
             number+=3;
         }
